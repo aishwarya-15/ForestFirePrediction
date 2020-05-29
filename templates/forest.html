@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <style>
+                   body{
+  background-color:#fff;
+}
+div{
+  font-family: cursive;
+}
+.pred{
+ font:40px;
+ font-family:cursive;
+ text-align:center;
+ }
+h2{
+  text-align: center;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.form{
+  max-width:350px;
+  border-radius: 20px;
+  margin: auto;
+  background: rgba(0,0,0,.8);
+  box-sizing: border-box;
+  padding: 40px;
+  color: #fff;
+  margin-top: 60px;
+}
+
+input[type=number]{
+  width=100%;
+  box-sizing: border-box;
+  padding:12px 12px;
+  background:rgba(0,0,0,.10);
+  outline: none;
+  border: none;
+  border-bottom: 1px  #fff;
+  color:#fff;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family:  cursive;
+}
+input[type=submit]{
+  width:100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 30px;
+  outline: none;
+  background: #60adde;
+  opacity: 0.7;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+input[type=submit]:hover{
+  background: #003366;
+  opacity: 0.7;
+}
+      </style>
+    <meta charset="utf-8">
+    <title>Forest Fire Prediction</title>
+    <meta name="viewport" content="width=content-width,initial-scale=1">
+  </head>
+  <body>
+    <div class="form">
+       <h2>Forest Fire Prediction</h2>
+       <form class="" action="/predict" method="post">
+           <input type="number" placeholder="Temperature" name="Temperature" value="temperature">
+           <input type="number" placeholder="Oxygen" name="Oxygen" value="oxygen">
+           <input type="number" placeholder="Humidity" name="Humidity" value="humidity">
+           <input type="submit" value="Predict">
+      </form>
+     </div>
+     <br>
+    <div class="pred">{{pred}}  </div>
+  </body>
+</html>
